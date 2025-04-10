@@ -1,0 +1,36 @@
+# basic gitlab cicd pipeline
+stages:
+  - build
+  - test
+  - deploy
+default:
+  image: ubuntu
+build_task:
+  stage: build
+  script:
+    - echo "building task"
+    - uptime
+    - hostname
+    - date
+    - cat /etc/os-release
+buid_task1:
+  stage: build
+  script:
+    - echo "building task1"
+    - uptime
+    - hostname
+    - datebuild_image:
+  stage: test
+  script:
+    - echo "building image"
+    - uptime
+    - hostname
+    - date
+build_test:
+  stage: deploy
+  script:
+    - echo "building test"
+    - uptime
+    - hostname
+    - date
+
